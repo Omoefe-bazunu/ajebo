@@ -6,7 +6,7 @@ const Fashion = () => {
   const { fashionItems } = useContext(AppContext);
 
   return (
-    <div className="min-h-screen py-8 px-4 mt-25 text-gray-700">
+    <div className="min-h-screen py-8 px-4 mt-30 lg:mt-20 darktheme text-gray-700 ">
       <h1 className="text-3xl font-bold text-center mb-2 text-gray-700">
         ART Wear
       </h1>

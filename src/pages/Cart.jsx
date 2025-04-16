@@ -29,7 +29,7 @@ const Cart = () => {
     )}`;
 
     // Redirect to WhatsApp with pre-filled message
-    const phoneNumber = "+2349043970401"; // Replace with the client's WhatsApp number
+    const phoneNumber = "+1 (817) 298-9961";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       whatsappMessage
     )}`;
@@ -38,8 +38,8 @@ const Cart = () => {
   };
 
   return (
-    <div className="min-h-screen p-6 mt-25">
-      <h1 className="text-3xl font-bold mb-4">Your Cart</h1>
+    <div className="min-h-screen p-6 mt-30 lg:mt-20 darktheme text-gray-700">
+      <h1 className="text-3xl font-bold mb-4 ">Your Cart</h1>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (

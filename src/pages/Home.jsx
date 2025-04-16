@@ -13,7 +13,7 @@ const Home = () => {
     <div>
       <Hero />
 
-      <section className="py-8">
+      <section className="py-8 darktheme">
         <h2 className="text-2xl font-bold text-center mb-12 text-gray-700">
           Catering Highlights
         </h2>
@@ -32,7 +32,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-8 bg-gray-100">
+      <section className="py-8 bg-[#fcf7f7]">
         <h2 className="text-2xl text-gray-700 font-bold text-center mb-12">
           Fashion Highlights
         </h2>

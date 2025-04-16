@@ -15,7 +15,10 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div className="text-white/80 space-y-1">
-          <p>Dallas-Fort Worth Metropolitan Area, TX, USA</p>
+          <p>
+            Dallas-Fort Worth Metropolitan Area, <br />
+            TX, USA
+          </p>
           <p>Email: info@ajeborush.com</p>
           <p>Phone: +1 (817) 298-9961</p>
         </div>
@@ -41,8 +44,11 @@ const Footer = () => {
         </div>
 
         {/* Footer Note */}
-        <div className="text-sm text-white/50 pt-4">
+        <div className="text-sm text-white/50 pt-2">
           &copy; {new Date().getFullYear()} AjeboRush. All rights reserved.
+        </div>
+        <div className="text-sm text-white/20 pt-4 w-[70%]">
+          Designed By HIGH-ER ENTERPRISES : +2349043970401
         </div>
       </div>
     </footer>

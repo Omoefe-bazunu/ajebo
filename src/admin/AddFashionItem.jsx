@@ -81,7 +81,7 @@ const AddFashionItem = () => {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-3 rounded-xl shadow-inner outline-none"
+          className="w-full p-3 rounded-xl bg-[#e0e0e0] shadow-inner outline-none"
           required
         />
         <input

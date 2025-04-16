@@ -40,8 +40,8 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="p-6 max-w-4xl mx-auto text-gray-800">
-      <div className="bg-[#faeded] p-6 rounded-2xl shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff] mt-25">
+    <div className="p-6 max-w-4xl mx-auto text-gray-800 darktheme">
+      <div className="bg-[#faeded] p-6 rounded-2xl shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff] mt-35 lg:mt-25">
         <img
           src={item.imageUrl}
           alt={item.name}

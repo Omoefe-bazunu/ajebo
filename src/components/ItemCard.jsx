@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ItemCard = ({ item, type }) => {
   return (
     <Link to={`/product/${type}/${item.id}`}>
-      <div className="bg-[#e0e0e0] p-4 text-gray-700 rounded-2xl shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff] hover:shadow-lg cursor-pointer transition-all">
+      <div className="bg-[#fcf7f7] p-4 text-gray-700 rounded-2xl shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff] hover:shadow-lg cursor-pointer transition-all">
         <img
           src={item.imageUrl}
           alt={item.name}

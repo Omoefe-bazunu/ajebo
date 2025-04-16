@@ -2,24 +2,38 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Match the 'products' collection specifically
+
+    // Public read, authenticated write for 'products'
     match /products/{productId} {
-      // Allow anyone to read products (public access)
       allow read: if true;
-
-      // Allow write only if the user is authenticated
-      allow write: if request.auth != null;
-    }
-    
-     match /users/{userId} {
-      // Allow anyone to read products (public access)
-      allow read: if true;
-
-      // Allow write only if the user is authenticated
       allow write: if request.auth != null;
     }
 
-    // Deny access to all other collections by default
+    // Public read, authenticated write for 'users'
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Public read, authenticated write for 'cateringItems'
+    match /cateringItems/{itemId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Public read, authenticated write for 'fashionItems'
+    match /fashionItems/{itemId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Public read, authenticated write for 'testimonials'
+    match /testimonials/{testimonialId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Deny all other unmatched access
     match /{document=**} {
       allow read, write: if false;
     }

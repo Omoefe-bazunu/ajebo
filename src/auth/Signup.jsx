@@ -42,62 +42,64 @@ const Signup = () => {
   };
 
   return (
-    <div className="p-6 max-w-md mx-auto mt-25 text-gray-800">
-      <h2 className="text-2xl font-bold mb-6 text-center">
-        {isLogin ? "Login" : "Sign Up"}
-      </h2>
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-4 p-6 rounded-2xl shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff]"
-      >
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 rounded-xl bg-[#e0e0e0] shadow-inner outline-none"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-3 rounded-xl bg-[#e0e0e0] shadow-inner outline-none"
-          required
-          minLength={6}
-        />
-        {!isLogin && (
+    <div className="w-full darktheme">
+      <div className="p-6 max-w-md mx-auto mt-30 lg:mt-20 darktheme text-gray-700">
+        <h2 className="text-2xl font-bold mb-6 text-center">
+          {isLogin ? "Login" : "Sign Up"}
+        </h2>
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4 p-6 rounded-2xl shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff]"
+        >
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full p-3 rounded-xl bg-[#e0e0e0] shadow-inner outline-none"
+            required
+          />
           <input
             type="password"
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             className="w-full p-3 rounded-xl bg-[#e0e0e0] shadow-inner outline-none"
             required
             minLength={6}
           />
-        )}
-        <button
-          type="submit"
-          className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl shadow-md transition"
-        >
-          {isLogin ? "Login" : "Sign Up"}
-        </button>
-      </form>
-      {error && <p className="text-red-500 text-center mt-4">{error}</p>}
-      <div className="text-center mt-4">
-        <button
-          onClick={() => {
-            setIsLogin(!isLogin);
-            setError(null);
-          }}
-          className="text-orange-500 hover:text-orange-600 focus:outline-none"
-        >
-          {isLogin
-            ? "Don't have an account? Sign Up"
-            : "Already have an account? Login"}
-        </button>
+          {!isLogin && (
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="w-full p-3 rounded-xl bg-[#e0e0e0] shadow-inner outline-none"
+              required
+              minLength={6}
+            />
+          )}
+          <button
+            type="submit"
+            className="w-full bg-green-500 hover:bg-green-600 cursor-pointer text-white py-3 rounded-xl shadow-md transition"
+          >
+            {isLogin ? "Login" : "Sign Up"}
+          </button>
+        </form>
+        {error && <p className="text-red-500 text-center mt-4">{error}</p>}
+        <div className="text-center mt-4">
+          <button
+            onClick={() => {
+              setIsLogin(!isLogin);
+              setError(null);
+            }}
+            className="text-orange-500 hover:text-orange-600 focus:outline-none cursor-pointer"
+          >
+            {isLogin
+              ? "Don't have an account? Sign Up"
+              : "Already have an account? Login"}
+          </button>
+        </div>
       </div>
     </div>
   );

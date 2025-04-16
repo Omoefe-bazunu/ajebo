@@ -26,18 +26,29 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-white backdrop-blur-md text-dark-slate shadow-[0_4px_10px_rgba(0,0,0,0.05)] z-50">
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-4">
-        {/* Logo Section */}
+      <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between py-4">
+        {/* Mobile Brand Name (above links) */}
+        <div className="block sm:hidden text-center mb-3">
+          <NavLink
+            to="/"
+            className="text-2xl font-bold text-coral-pink"
+            style={{ fontFamily: "Poppins, sans-serif" }}
+          >
+            AjeboRush
+          </NavLink>
+        </div>
+
+        {/* Desktop Brand Name */}
         <NavLink
           to="/"
-          className="text-2xl font-bold text-coral-pink"
+          className="hidden sm:block text-2xl font-bold text-coral-pink"
           style={{ fontFamily: "Poppins, sans-serif" }}
         >
           AjeboRush
         </NavLink>
 
         {/* Navigation Links */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center justify-center space-x-2">
           <NavLink
             to="/"
             className={getLinkClass}

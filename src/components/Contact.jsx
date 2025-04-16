@@ -122,7 +122,7 @@ const Contact = () => {
         <div className="mt-8 text-center">
           <p className="text-white/80 mb-3">Prefer to chat directly?</p>
           <a
-            href="https://wa.me/2348012345678"
+            href="https://wa.me/+1 (817) 298-9961"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-all duration-300"

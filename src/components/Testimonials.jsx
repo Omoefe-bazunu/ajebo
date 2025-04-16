@@ -49,7 +49,7 @@ const Testimonial = () => {
           className="text-2xl md:text-4xl font-bold mb-12 tracking-tight"
           style={{ fontFamily: "Poppins, sans-serif" }}
         >
-          What Our Customers Say
+          Customers' Reviews
         </h2>
 
         {current && (
